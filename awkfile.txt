@@ -1,0 +1,3 @@
+/root/{print "\047 Hello! \047"}
+
+#usage awk -f awkfile.txt /etc/passwd

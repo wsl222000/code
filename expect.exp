@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+set ip [lindex $argv 0]
+set un [lindex $argv 1]
+#set pa [lindex $argv 2]
+spawn ftp $ip
+expect "*:*"
+send "$un\r"
+expect "*:*"
+send "\r"
+expect "*>*"
+send "ls"
+expect eof
